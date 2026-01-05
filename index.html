@@ -10,7 +10,7 @@
   <meta name="keywords" content="Shopify expert, Shopify designer, Shopify developer, ecommerce conversion, CRO, performance marketing, Liquid, Shopify speed, A/B testing, funnels" />
   <meta name="author" content="Timaro Lucas" />
   <meta name="publisher" content="Timaro Lucas" />
-  <meta name="theme-color" content="#10b981" />
+  <meta name="theme-color" content="#7c3aed" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Timaro Lucas • Shopify Expert & Digital Marketer" />
@@ -82,31 +82,32 @@
 
   <style>
     :root{
-      --primary:#10b981; --primary-dark:#059669; --primary-ink:#065f46; --accent:#22d3ee;
-      --bg:#0b0d12; --card:#0f1218; --muted:#94a3b8; --text:#e5f4ed; --border:rgba(255,255,255,.08);
-      --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.25);
+      --primary:#7c3aed; --primary-dark:#5b21b6; --primary-ink:#0b1220; --primary-2:#8b5cf6; --accent:#06b6d4;
+      --bg:#fbf9f6; --card:#ffffff; --surface:#fffaf6; --muted:#6b7280; --text:#0b1220; --border:rgba(11,17,32,.06);
+      --star:#f59e0b; --star-glow: rgba(245,158,11,0.12);
+      --radius:14px; --shadow:0 10px 30px rgba(16,24,40,.06);
     }
     *{box-sizing:border-box}
     html,body{margin:0;padding:0}
-    body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; background:linear-gradient(180deg,#0b0d12 0%, #0d1117 100%); color:var(--text); line-height:1.6; overflow-x:hidden}
+    body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu; background:linear-gradient(180deg,#fbf9f6 0%, #f6f7fb 100%); color:var(--text); line-height:1.6; overflow-x:hidden}
     img{max-width:100%; display:block}
     a{color:inherit; text-decoration:none}
-    .container{max-width:1200px; margin:0 auto; padding:0 20px}
+    .container{max-width:1140px; margin:0 auto; padding:0 24px}
 
     /* Header */
-    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(10px); background:rgba(13,17,23,.7); border-bottom:1px solid var(--border)}
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(10px); background:rgba(255,255,255,.75); border-bottom:1px solid var(--border)}
     .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
     .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.5px}
-    .brand .dot{width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg,var(--primary),#34d399)}
+    .brand .dot{width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg,var(--primary),var(--primary-2))}
     .nav-links{display:flex; gap:26px}
     .nav-links a{opacity:.85; position:relative}
     .nav-links a:hover{opacity:1}
     .nav-links a::after{content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px; background:linear-gradient(90deg,var(--primary),var(--accent)); transition:width .25s}
     .nav-links a:hover::after{width:100%}
     .actions{display:flex; gap:10px}
-    .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 16px; border-radius:12px; border:1px solid var(--border); background:#0f131a; color:var(--text); box-shadow:none; transition:transform .15s, box-shadow .15s, border-color .2s}
-    .btn:hover{transform:translateY(-2px); box-shadow:0 8px 22px rgba(0,0,0,.35); border-color:#1f2937}
-    .btn-primary{background:linear-gradient(135deg,var(--primary),#34d399); border:0; color:#04130d}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 16px; border-radius:12px; border:1px solid var(--border); background:var(--surface); color:var(--primary-ink); box-shadow:none; transition:transform .15s, box-shadow .15s, border-color .2s}
+    .btn:hover{transform:translateY(-2px); box-shadow:0 8px 22px rgba(16,24,40,.06); border-color:rgba(11,17,32,.08)}
+    .btn-primary{background:linear-gradient(135deg,var(--primary),var(--primary-2)); border:0; color:var(--primary-ink)}
 
     /* Mobile nav */
     .hamburger{display:none; width:42px; height:42px; border-radius:10px; border:1px solid var(--border); align-items:center; justify-content:center}
@@ -118,14 +119,14 @@
 /* Hero */
 .hero{
   position:relative;
-  padding:110px 0 70px;
+  padding:100px 0 56px;
   overflow:hidden;
 }
 
 .grid-hero{
   display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:48px;
+  grid-template-columns: minmax(0,1fr) 420px;
+  gap:40px;
   align-items:center;
 }
 
@@ -136,24 +137,25 @@
   }
 }
 
-.badge{
+    .badge{
   display:inline-flex;
   gap:8px;
   align-items:center;
   padding:8px 12px;
   border-radius:999px;
   border:1px solid var(--border);
-  background:rgba(16,185,129,.08);
-  color:#a7f3d0;
+  background:linear-gradient(90deg, rgba(124,58,237,0.06), rgba(6,182,212,0.03));
+  color:var(--primary);
   font-weight:600;
   font-size:.9rem;
 }
 
 .display{
   font-size:3.1rem;
-  line-height:1.1;
+  line-height:1.05;
   margin:12px 0 14px;
   letter-spacing:.2px;
+  color:var(--primary-ink);
 }
 
 .lead{
@@ -216,40 +218,40 @@
     /* Sections */
     section{scroll-margin-top:90px}
     .section{padding:84px 0}
-    .section h2{font-size:2.1rem; margin:0 0 10px}
+    .section h2{font-size:2.1rem; margin:0 0 10px; color:var(--primary-dark)}
     .section p.sub{color:var(--muted); margin:0 0 30px}
 
     /* Services */
-    .cards{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px}
+    .cards{display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px}
     @media (max-width: 960px){.cards{grid-template-columns:1fr}}
-    .card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px; box-shadow:var(--shadow)}
+    .card{background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); display:flex; flex-direction:column}
+    .card .card-body{flex:1}
     .card h3{margin:10px 0}
-    .chip{display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); color:#a7f3d0; background:rgba(34,197,94,.06); font-size:.8rem; font-weight:600}
+    .chip{display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); color:var(--primary); background:rgba(124,58,237,0.06); font-size:.8rem; font-weight:600}
     .card ul{margin:12px 0 0; padding-left:18px; color:var(--muted)}
 
     /* Case studies */
-    .cases{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
-    @media (max-width: 1080px){.cases{grid-template-columns:1fr 1fr}}
-    @media (max-width: 720px){.cases{grid-template-columns:1fr}}
-    .case{position:relative; border-radius:16px; overflow:hidden; background:#0c1016; border:1px solid var(--border)}
+    .cases{display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px}
+    @media (max-width: 1080px){.cases{grid-template-columns:repeat(auto-fit, minmax(240px,1fr))}}
+    .case{position:relative; border-radius:16px; overflow:hidden; background:var(--surface); border:1px solid var(--border)}
     .case img{height:200px; width:100%; object-fit:cover}
     .case .meta{padding:16px}
     .metrics{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
-    .metric{padding:8px 10px; background:#0b1713; border:1px solid var(--border); border-radius:10px; font-size:.9rem}
+    .metric{padding:8px 10px; background:var(--card); border:1px solid var(--border); border-radius:10px; font-size:.9rem}
 
     /* Pricing */
-    .pricing{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+    .pricing{display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:20px}
     @media (max-width: 960px){.pricing{grid-template-columns:1fr}}
     .plan{position:relative}
     .plan .price{font-size:2rem; margin:8px 0}
     .plan .cta{margin-top:16px}
-    .popular::after{content:"Most booked"; position:absolute; top:14px; right:14px; font-size:.8rem; padding:6px 10px; border-radius:999px; background:linear-gradient(135deg,var(--primary),#34d399); color:#04130d; font-weight:700}
+    .popular::after{content:"Most booked"; position:absolute; top:14px; right:14px; font-size:.8rem; padding:6px 10px; border-radius:999px; background:linear-gradient(135deg,var(--primary),var(--primary-2)); color:var(--primary-ink); font-weight:700}
 
     /* Process */
-    .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:18px}
+    .steps{display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:18px}
     @media (max-width: 960px){.steps{grid-template-columns:1fr 1fr}}
     .step{position:relative; padding:20px; border-radius:14px; background:var(--card); border:1px solid var(--border)}
-    .step .num{width:36px; height:36px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(135deg,var(--primary),#34d399); color:#04130d; font-weight:800}
+    .step .num{width:36px; height:36px; border-radius:10px; display:grid; place-items:center; background:linear-gradient(135deg,var(--primary),var(--primary-2)); color:var(--primary-ink); font-weight:800}
 
     /* Testimonials (simple slider) */
     .slider{position:relative; overflow:hidden}
@@ -258,7 +260,7 @@
     .quote{background:var(--card); border:1px solid var(--border); padding:26px; border-radius:16px; min-height:180px}
     .dots{display:flex; gap:8px; justify-content:center; margin-top:12px}
     .dot{width:10px; height:10px; border-radius:50%; background:#1f2937; border:1px solid var(--border); cursor:pointer}
-    .dot.active{background:linear-gradient(135deg,var(--primary),#34d399)}
+    .dot.active{background:linear-gradient(135deg,var(--primary),var(--primary-2))}
 
     /* FAQ */
     .faq{max-width:900px; margin:0 auto}
@@ -271,11 +273,15 @@
     .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:26px}
     @media (max-width: 960px){.contact-grid{grid-template-columns:1fr}}
     .field{display:flex; flex-direction:column; gap:8px}
-    .input{padding:14px; border-radius:12px; border:1px solid var(--border); background:#0f131a; color:var(--text)}
-    .input:focus{outline:2px solid rgba(34,197,94,.35)}
+    .input{padding:14px; border-radius:12px; border:1px solid var(--border); background:var(--surface); color:var(--primary-ink)}
+    .input::placeholder{color:var(--muted); opacity:0.9}
+    .input:focus{outline:2px solid rgba(124,58,237,0.12); box-shadow:0 6px 18px rgba(124,58,237,0.06)}
+    .input:disabled, .input[disabled]{opacity:.6; cursor:not-allowed; background:rgba(11,17,32,0.02)}
+    select.input, select{background:var(--surface); border:1px solid var(--border); color:var(--primary-ink); padding:12px 14px; border-radius:12px}
+    button:disabled{opacity:.6; cursor:not-allowed}
 
     /* Footer */
-    footer{border-top:1px solid var(--border); padding:40px 0; background:rgba(15,19,26,.6)}
+    footer{border-top:1px solid var(--border); padding:40px 0; background:transparent}
     .footer-grid{display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:20px}
     @media (max-width: 960px){.footer-grid{grid-template-columns:1fr 1fr}}
     .social a{display:inline-flex; width:40px; height:40px; border-radius:10px; border:1px solid var(--border); align-items:center; justify-content:center; margin-right:8px}
@@ -298,9 +304,9 @@
 <!-- === ADVANCED LAYOUT OVERRIDES (non-destructive) === -->
 <style>
 :root{
-  --primary:#10b981; --primary-2:#34d399; --accent:#22d3ee;
-  --card:#0f131a; --border:rgba(255,255,255,.10); --ink:#e5f4ed; --muted:#9fb1c7;
-  --radius:16px; --shadow:0 12px 28px rgba(0,0,0,.28);
+  --primary:#7c3aed; --primary-2:#8b5cf6; --accent:#06b6d4;
+  --card:#ffffff; --border:rgba(11,17,32,.06); --ink:#0b1220; --muted:#6b7280;
+  --radius:16px; --shadow:0 12px 28px rgba(16,24,40,.06);
 }
 /* Projects: advanced responsive grid with hover lift */
 #ec-projectGrid, #projectGrid, #portfolio .projects .grid{
@@ -337,25 +343,56 @@
 
 /* Reviews: two-column layout with sticky summary and clean feed */
 #reviews .review-wrapper, #reviews .review-wrap, #ecomelites-reviews .review-wrapper, #reviewsGrid{
-  display:grid !important; grid-template-columns: 0.95fr 1.05fr !important; gap:22px !important; align-items:start !important;
+  display:grid !important; grid-template-columns: minmax(240px,320px) 1fr !important; gap:28px !important; align-items:start !important;
 }
 @media (max-width: 980px){
   #reviews .review-wrapper, #reviews .review-wrap, #ecomelites-reviews .review-wrapper, #reviewsGrid{ grid-template-columns:1fr !important }
 }
-.review-summary{ position:sticky !important; top:92px !important }
-.avg{ display:flex !important; align-items:center !important; gap:10px !important }
-.avg .score{ font-size:2.6rem !important; font-weight:800 !important; color:#bbf7d0 !important }
-.avg .stars{ font-size:18px !important; letter-spacing:2px !important }
+.review-summary{ position:sticky !important; top:92px !important; align-self:start !important; padding:20px !important }
+.avg{ display:flex !important; align-items:center !important; gap:14px !important }
+.avg .score{ font-size:2.4rem !important; font-weight:800 !important; color:var(--star) !important }
+.avg .stars{ font-size:18px !important; letter-spacing:1.6px !important }
 .stars{ display:flex !important; gap:6px !important }
-.star{ font-size:22px !important; cursor:pointer !important; opacity:.85 !important }
-.star:hover, .star.active{ opacity:1 !important }
-.bars{ display:grid !important; gap:8px !important; margin-top:8px !important }
-.bar-row{ display:grid !important; grid-template-columns:36px 1fr 38px !important; gap:10px !important; align-items:center !important; color:var(--muted) !important; font-size:.92rem !important }
-.bar{ height:8px !important; background:#141a23 !important; border:1px solid var(--border) !important; border-radius:999px !important; overflow:hidden !important }
+.star{ font-size:20px !important; cursor:pointer !important; opacity:.9 !important; color:rgba(11,17,32,0.18) !important }
+.star.filled{ color:var(--star) !important; text-shadow:0 1px 0 rgba(0,0,0,0.02); filter:drop-shadow(0 6px 18px var(--star-glow)) !important }
+  .star:hover, .star.active{ opacity:1 !important }
+  .star.active{ color:var(--star) !important; filter:drop-shadow(0 6px 16px var(--star-glow)) !important }
+.bars{ display:grid !important; gap:8px !important; margin-top:12px !important }
+.bar-row{ display:grid !important; grid-template-columns:40px 1fr 42px !important; gap:10px !important; align-items:center !important; color:var(--muted) !important; font-size:.92rem !important }
+.bar{ height:8px !important; background:rgba(11,17,32,0.06) !important; border-radius:999px !important; overflow:hidden !important }
 .bar i{ display:block !important; height:100% !important; width:0% !important; background:linear-gradient(90deg,var(--primary),var(--primary-2)) !important }
-#ec-reviews, #reviewsFeed, #reviewsList{ display:grid !important; gap:12px !important }
-#ec-reviews .item, #reviewsFeed .review, #reviewsList .item{ padding:16px !important; background:var(--card) !important; border:1px solid var(--border) !important; border-radius:14px !important }
+#ec-reviews, #reviewsFeed, #reviewsList{ display:grid !important; gap:14px !important }
+#ec-reviews .item, #reviewsFeed .review, #reviewsList .item{ padding:14px !important; background:var(--card) !important; border:1px solid var(--border) !important; border-radius:12px !important; display:flex !important; gap:12px !important; align-items:flex-start !important }
+/* Review card parts */
+.review-avatar{width:56px; height:56px; border-radius:50%; flex-shrink:0; overflow:hidden; background:linear-gradient(135deg,var(--primary),var(--primary-2)); display:grid; place-items:center; color:white; font-weight:700}
+.review-body{flex:1}
+.review .author{font-weight:700}
+.review .meta{color:var(--muted); font-size:.9rem; margin-top:4px}
+  .review .rating{display:flex; gap:8px; align-items:center; margin-bottom:8px}
+  .review .rating .star{ font-size:18px }
+  .review .rating .star.filled{ color:var(--star) }
 #ec-loadMoreReviews, #loadMoreReviews{ display:none; margin:12px auto 0 }
+
+/* Make the reviews feed scroll independently on larger screens */
+.review-panel{ padding:20px !important }
+.reviews-feed{ display:grid; gap:14px; max-height:520px; overflow:auto; padding-right:6px }
+.reviews-feed .review .content{display:block}
+
+@media (max-width: 980px){
+  .reviews-feed{ max-height:none; overflow:visible; padding-right:0 }
+  .review-summary{ position:relative !important; top:auto !important; margin-bottom:12px }
+  #reviews .review-wrapper{ grid-template-columns:1fr !important }
+  #ec-reviews .item, #reviewsFeed .review, #reviewsList .item{ flex-direction:row; }
+}
+
+@media (max-width: 640px){
+  #ec-reviews .item, #reviewsFeed .review, #reviewsList .item{ flex-direction:column; align-items:stretch }
+  .review-avatar{width:48px;height:48px;margin-bottom:8px}
+  .avg .score{ font-size:clamp(1.6rem, 6vw, 2rem) !important }
+  .avg .stars, .review .rating .star{ font-size:18px !important }
+}
+.reviews-feed::-webkit-scrollbar{width:10px}
+.reviews-feed::-webkit-scrollbar-thumb{background:linear-gradient(180deg, var(--primary), var(--primary-2)); border-radius:999px}
 </style>
 
 <style id="reviews-solid-layout">
@@ -374,13 +411,14 @@
 @media (max-width:680px){.review-form .row{grid-template-columns:1fr}}
 .review-form .field{display:flex;flex-direction:column}
 .review-form label{font-size:.92rem;color:var(--muted);margin:6px 0 6px 2px}
-.input{width:100%;height:44px;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#0f131a;color:var(--ink)}
-textarea.input{min-height:120px;height:auto;resize:vertical}
-.input:focus{outline:2px solid rgba(34,197,94,.35)}
+  .input{width:100%;height:44px;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:var(--surface);color:var(--primary-ink)}
+  textarea.input{min-height:120px;height:auto;resize:vertical}
+  .input:focus{outline:2px solid rgba(124,58,237,0.12); box-shadow:0 6px 18px rgba(124,58,237,0.06)}
 .input:invalid{outline:2px solid rgba(239,68,68,.35)}
 
 #starsInput{display:flex;gap:8px;align-items:center;padding:6px 2px}
-#starsInput .star{font-size:22px;cursor:pointer;opacity:.75;transition:opacity .15s}
+#starsInput .star{font-size:22px;cursor:pointer;opacity:.85;transition:opacity .15s; color:rgba(11,17,32,0.18)}
+#starsInput .star.filled{ color:var(--star); filter:drop-shadow(0 6px 16px var(--star-glow))}
 #starsInput .star:hover,#starsInput .star.active{opacity:1}
 
 .review-form input[type="range"]{-webkit-appearance:none;appearance:none;width:100%;height:10px;background:#132029;border:1px solid var(--border);border-radius:999px;outline:none}
@@ -388,7 +426,7 @@ textarea.input{min-height:120px;height:auto;resize:vertical}
 .review-form input[type="range"]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-2));border:0}
 
 .review-form .actions{display:flex;gap:12px;align-items:center}
-.review-form .btn.btn-primary{padding:10px 16px;border-radius:12px;border:0;font-weight:700;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#04130d}
+  .review-form .btn.btn-primary{padding:10px 16px;border-radius:12px;border:0;font-weight:700;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:var(--primary-ink)}
 </style>
 
 </head>
@@ -418,8 +456,8 @@ textarea.input{min-height:120px;height:auto;resize:vertical}
   </header>
 
   <!-- Mobile drawer -->
-  <div id="drawer" class="hide" style="position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:60">
-    <aside style="position:absolute; right:0; top:0; height:100%; width:min(80vw,360px); background:#0f131a; border-left:1px solid var(--border); padding:18px">
+  <div id="drawer" class="hide" style="position:fixed; inset:0; background:rgba(0,0,0,.35); z-index:60">
+    <aside style="position:absolute; right:0; top:0; height:100%; width:min(80vw,360px); background:var(--surface); border-left:1px solid var(--border); padding:18px">
       <div style="display:flex; justify-content:space-between; align-items:center">
         <strong>Menu</strong>
         <button class="btn" id="closeDrawer" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
@@ -441,7 +479,7 @@ textarea.input{min-height:120px;height:auto;resize:vertical}
     <div class="container grid-hero">
       <div>
         <span class="badge"><i class="fa-solid fa-bolt"></i> Ecommerce Specialist • 5+ yrs</span>
-        <h1 class="display">More Traffic.  More Sales. <span style="background:linear-gradient(90deg,var(--primary),#34d399); -webkit-background-clip:text; -webkit-text-fill-color:transparent">Measurable growth</span>.</h1>
+        <h1 class="display">More Traffic.  More Sales. <span style="background:linear-gradient(90deg,var(--primary),var(--primary-2)); -webkit-background-clip:text; -webkit-text-fill-color:transparent">Measurable growth</span>.</h1>
         <p class="lead">Hi, I'm <strong>Timaro Lucas,</strong> an Ecommerce Specialist and Digital Marketer. My Shopify Partner ID: 3076044. I build Ecommerce stores that don't just look great they convert visitors into loyal buyers and also maximize sales. Many store owners believe design and Advertisement alone drives sales and traffic, but it's often the small details like slow speed or poor checkout flow and lack of sales funnel system that hurt results. I focus on fixing those gaps through clean design, smart marketing, and conversion strategy, helping brands grow consistently and build trust with their customers.</p>
         <div class="kpis" id="kpis">
           <div class="kpi"><strong id="kpiYears">5+</strong><small>Years Experience</small></div>
@@ -497,7 +535,7 @@ textarea.input{min-height:120px;height:auto;resize:vertical}
 
 <style>
 .green-marquee {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 100%);
   padding: 14px 0;
   overflow: hidden;
   position: relative;
@@ -518,7 +556,7 @@ textarea.input{min-height:120px;height:auto;resize:vertical}
 }
 
 .marquee-content span {
-  color: #04130d;
+  color: var(--primary-ink);
   font-weight: 600;
   font-size: 14px;
   letter-spacing: 0.3px;
@@ -746,8 +784,23 @@ document.addEventListener("click", function(e) {
   <!-- Case Studies with metrics -->
   <section id="cases" class="section" aria-label="Case Studies">
     <div class="container">
-      <h2>Recent wins</h2>
-      <p class="sub">A snapshot of outcomes after design + CRO + speed + marketing alignment.</p>
+  
+
+  
+  <!-- Image Sales Proof (separate gallery) -->
+  <section id="sales-gallery" class="gallery-section">
+    <div class="container">
+      <h2 class="gallery-title"><span>Image</span> Proof</h2>
+      <p class="gallery-subtitle">Screenshots and campaign images that support the video case study.</p>
+      <div class="gallery-grid">
+        <div class="gallery-card"><img class="gallery-img" src="https://i.pinimg.com/736x/6b/c3/a6/6bc3a619ebc867ea05b6f1dd3ebe2abe.jpg"><div class="card-overlay"></div></div>
+        <div class="gallery-card"><img class="gallery-img" src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/delivery/asset/1e034bbbc63e8fcdee5d91181f4e8b7c-1744805081/Screenshot%202025-04-16%20120406.png"><div class="card-overlay"></div></div>
+        <div class="gallery-card"><img class="gallery-img" src="https://i.pinimg.com/736x/26/34/72/26347291e9242b96e8ca1d798d586a7f.jpg"><div class="card-overlay"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
       <div class="cases">
         <article class="case">
           <img src="https://images.unsplash.com/photo-1520975922284-53d45b6ebad3?q=80&w=1200&auto=format&fit=crop" alt="Lifestyle apparel storefront" loading="lazy" />
@@ -794,661 +847,125 @@ document.addEventListener("click", function(e) {
 
 
 
-  <section id="sales-proof" class="gallery-section">
-
-<style>
-    .gallery-section {
-        padding: 80px 5%;
-        background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
-        font-family: 'Poppins', sans-serif;
-        position: relative;
-        overflow: hidden;
-    }
-
-    /* Animated background elements */
-    .gallery-section::before {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -10%;
-        width: 500px;
-        height: 500px;
-        background: radial-gradient(circle, rgba(0, 193, 106, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
-        z-index: 0;
-        animation: pulse 8s infinite alternate;
-    }
-
-    .gallery-section::after {
-        content: '';
-        position: absolute;
-        bottom: -30%;
-        left: -10%;
-        width: 400px;
-        height: 400px;
-        background: radial-gradient(circle, rgba(0, 193, 106, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
-        z-index: 0;
-        animation: pulse 10s infinite alternate-reverse;
-    }
-
-    @keyframes pulse {
-        0% { opacity: 0.3; transform: scale(1); }
-        100% { opacity: 0.6; transform: scale(1.1); }
-    }
-
-    .gallery-title {
-        text-align: center;
-        font-size: 42px;
-        font-weight: 700;
-        color: #FFFFFF;
-        margin-bottom: 20px;
-        letter-spacing: -0.5px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .gallery-title span {
-        color: #00C16A;
-        position: relative;
-    }
-
-    .gallery-title span::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: linear-gradient(90deg, #00C16A, transparent);
-        border-radius: 2px;
-    }
-
-    .gallery-subtitle {
-        text-align: center;
-        font-size: 18px;
-        color: #AAAAAA;
-        margin-bottom: 50px;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        position: relative;
-        z-index: 1;
-    }
-
-    /* Gallery grid */
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        gap: 25px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .gallery-card {
-        position: relative;
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        transition: all 0.4s ease;
-        background: #111111;
-        cursor: pointer;
-        transform: translateY(20px);
-        opacity: 0;
-        animation: fadeInUp 0.6s forwards;
-    }
-
-    @keyframes fadeInUp {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .gallery-card:nth-child(2) { animation-delay: 0.1s; }
-    .gallery-card:nth-child(3) { animation-delay: 0.2s; }
-    .gallery-card:nth-child(4) { animation-delay: 0.3s; }
-    .gallery-card:nth-child(5) { animation-delay: 0.4s; }
-    .gallery-card:nth-child(6) { animation-delay: 0.5s; }
-    .gallery-card:nth-child(7) { animation-delay: 0.6s; }
-    .gallery-card:nth-child(8) { animation-delay: 0.7s; }
-    .gallery-card:nth-child(9) { animation-delay: 0.8s; }
-
-    .gallery-img {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-
-    .gallery-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 35px rgba(0, 193, 106, 0.25);
-    }
-
-    .gallery-card:hover .gallery-img {
-        transform: scale(1.05);
-    }
-
-    .card-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-        padding: 30px 20px 20px;
-        transform: translateY(10px);
-        opacity: 0;
-        transition: all 0.3s ease;
-    }
-
-    .gallery-card:hover .card-overlay {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    .view-icon {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transform: scale(0.8);
-        transition: all 0.3s ease;
-    }
-
-    .gallery-card:hover .view-icon {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    /* Modal */
-    #galleryModal {
-        display: none;
-        position: fixed;
-        z-index: 999999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        padding: 40px 20px;
-        box-sizing: border-box;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    #galleryModal.active {
-        opacity: 1;
-    }
-
-    #galleryModal img {
-        margin: auto;
-        display: block;
-        max-width: 90%;
-        max-height: 85%;
-        border-radius: 12px;
-        box-shadow: 0 0 40px rgba(0, 193, 106, 0.2);
-        transform: scale(0.9);
-        transition: transform 0.3s ease;
-    }
-
-    #galleryModal.active img {
-        transform: scale(1);
-    }
-
-    .close-modal {
-        position: absolute;
-        top: 25px;
-        right: 40px;
-        font-size: 45px;
-        color: #FFFFFF;
-        cursor: pointer;
-        font-weight: 700;
-        z-index: 10;
-        transition: color 0.2s, transform 0.2s;
-    }
-
-    .close-modal:hover {
-        color: #00C16A;
-        transform: scale(1.1);
-    }
-
-    /* Arrows */
-    .arrow {
-        position: absolute;
-        top: 50%;
-        font-size: 50px;
-        color: #00C16A;
-        cursor: pointer;
-        font-weight: 700;
-        transform: translateY(-50%);
-        padding: 15px;
-        user-select: none;
-        transition: all 0.2s;
-        z-index: 10;
-        background: rgba(0, 0, 0, 0.3);
-        border-radius: 50%;
-        width: 60px;
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .arrow:hover {
-        color: #FFFFFF;
-        background: rgba(0, 193, 106, 0.2);
-        transform: translateY(-50%) scale(1.1);
-    }
-
-    #arrowLeft { left: 30px; }
-    #arrowRight { right: 30px; }
-
-    /* Image counter */
-    .image-counter {
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: #FFFFFF;
-        font-size: 16px;
-        background: rgba(0, 0, 0, 0.5);
-        padding: 8px 16px;
-        border-radius: 20px;
-        z-index: 10;
-    }
-
-    /* Loading animation */
-    .loading {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border: 3px solid rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        border-top-color: #00C16A;
-        animation: spin 1s ease-in-out infinite;
-    }
-
-    @keyframes spin {
-        to { transform: rotate(360deg); }
-    }
-
-    /* Grid layout toggle */
-    .layout-toggle {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 30px;
-        gap: 10px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .layout-btn {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        color: #CCCCCC;
-        padding: 8px 16px;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-family: 'Poppins', sans-serif;
-        font-size: 14px;
-    }
-
-    .layout-btn.active {
-        background: rgba(0, 193, 106, 0.15);
-        color: #00C16A;
-        border-color: rgba(0, 193, 106, 0.5);
-    }
-
-    .layout-btn:hover {
-        background: rgba(0, 193, 106, 0.1);
-        color: #FFFFFF;
-    }
-
-    /* Compact layout */
-    .gallery-grid.compact {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 15px;
-    }
-
-    .gallery-grid.compact .gallery-img {
-        height: 180px;
-    }
-
-    /* Masonry layout */
-    .gallery-grid.masonry {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        grid-auto-rows: 10px;
-    }
-
-    .gallery-grid.masonry .gallery-card {
-        grid-row-end: span 30;
-    }
-
-    .gallery-grid.masonry .gallery-card.tall {
-        grid-row-end: span 40;
-    }
-
-    /* Download button */
-    .download-btn {
-        position: absolute;
-        bottom: 30px;
-        right: 30px;
-        background: rgba(0, 193, 106, 0.2);
-        color: #00C16A;
-        border: 1px solid rgba(0, 193, 106, 0.5);
-        padding: 8px 16px;
-        border-radius: 20px;
-        cursor: pointer;
-        font-family: 'Poppins', sans-serif;
-        font-size: 14px;
-        transition: all 0.3s ease;
-        z-index: 10;
-    }
-
-    .download-btn:hover {
-        background: rgba(0, 193, 106, 0.3);
-        color: #FFFFFF;
-    }
-
-    /* Responsive */
-    @media(max-width: 768px){
-        .gallery-title { font-size: 34px; }
-        .gallery-subtitle { font-size: 16px; }
-        .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
-        .gallery-img { height: 200px; }
-        .arrow { font-size: 40px; width: 50px; height: 50px; }
-        #arrowLeft { left: 15px; }
-        #arrowRight { right: 15px; }
-        .download-btn { bottom: 20px; right: 20px; }
-    }
-
-    @media(max-width: 600px){
-        .gallery-title { font-size: 28px; }
-        .gallery-grid { grid-template-columns: 1fr; }
-        .gallery-img { height: 220px; }
-        .arrow { font-size: 35px; width: 45px; height: 45px; }
-        .close-modal { right: 20px; font-size: 40px; }
-    }
-</style>
-
-<h2 class="gallery-title"><span>Sales</span> Proof</h2>
-<p class="gallery-subtitle">Visual evidence of successful campaigns and client results</p>
-
-<div class="layout-toggle">
-    <button class="layout-btn active" data-layout="standard">Standard</button>
-    <button class="layout-btn" data-layout="compact">Compact</button>
-    <button class="layout-btn" data-layout="masonry">Masonry</button>
-</div>
-
-<div class="gallery-grid">
-    <!-- Images will be inserted here -->
-    <div class="gallery-card">
-        <img src="https://i.pinimg.com/736x/6b/c3/a6/6bc3a619ebc867ea05b6f1dd3ebe2abe.jpg" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/delivery/asset/1e034bbbc63e8fcdee5d91181f4e8b7c-1744805081/Screenshot%202025-04-16%20120406.png" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card tall">
-        <img src="https://i.pinimg.com/736x/26/34/72/26347291e9242b96e8ca1d798d586a7f.jpg" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/delivery/asset/dd4a49b06ea719d5b5b5675972afbda6-1727441444/Screenshot%202024-09-27%20at%2015.16.46.png" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card tall">
-        <img src="https://i.pinimg.com/736x/38/52/f2/3852f2f265936aac92521e10b06e2258.jpg" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/234315952/original/51ef336d94dbb89dfd42c1a10178ad532b1aaafd/fix-facebook-and-instagram-ad-account-issues-3b66.jpg" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://i.pinimg.com/736x/cc/7b/04/cc7b04d4a01fc71098c7428e78f286ff.jpg" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card tall">
-        <img src="https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/v1/attachments/delivery/asset/03d5319ebe7c794dea52c03ee20d21d3-1756137716/Screenshot%202025-08-25%20150925/fix-facebook-and-instagram-ad-account-issues-3b66.png" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://i.pinimg.com/736x/fd/ce/9b/fdce9bea6a6c6810f0a446aa05cec57f.jpg" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://i.pinimg.com/736x/f9/0e/5e/f90e5e3398d0f8db446b54f006ef1ed4.jpg" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card tall">
-        <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/delivery/asset/ea09860b29f849a3600a651dc294ab49-1727357352/ad%20sets.png" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/delivery/asset/bc0d0cdca58e8083ea4e6cc707e2221f-1742155800/Screenshot%202025-03-16%20200932.png" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://i.pinimg.com/736x/db/74/22/db7422e74e5e7ef0d79ae8d3be42bff4.jpg" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card tall">
-        <img src="https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/v1/attachments/delivery/asset/730152864eed9585274e225e55be1a78-1763493061/ad%20video%20text%201/set-up-your-facebook-and-instagram-ads.png" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://i.pinimg.com/736x/42/30/ca/4230caaf06fd1f00a7a4cc8b7b5ae47e.jpg" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/delivery/asset/0dc9999dd41d496580804f481c3d1d6c-1747232754/IG-fixed.jpg" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card tall">
-        <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/v1/attachments/delivery/asset/be5007cfcb969f294bf303e95640de0e-1756983696/Screenshot%202025-09-04%20105852/fix-facebook-and-instagram-ad-account-issues-3b66.png" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/v1/attachments/delivery/asset/0e9a76e04daa5754315676df030d7385-1764083573/ad%20botox%201/set-up-your-facebook-and-instagram-ads.png" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://fiverr-res.cloudinary.com/images/t_smartwm/t_main1,q_auto,f_auto,q_auto,f_auto/v1/attachments/delivery/asset/e05fb2e9508631fd8e1cd9f6055aed7f-1763736255/Screen%20Shot%202025-11-21%20at%207.42.31%20AM/set-up-your-facebook-and-instagram-ads.png" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card tall">
-        <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/234315952/original/c66d57dbc9fb8c9776c1a703ee96de7ba633aa98/fix-facebook-and-instagram-ad-account-issues-3b66.jpg" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/delivery/asset/df0b89138d4c5cebc78c3460999870d3-1748020199/Screenshot%202025-05-23%20170619.png" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card">
-        <img src="https://i.pinimg.com/736x/e6/e4/1f/e6e41f01ba86308f30c811bc6caf150b.jpg" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-    <div class="gallery-card tall">
-        <img src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/delivery/asset/9d26438d4df656db90bfb497750a7ed0-1741870853/Screenshot%202025-03-13%20125257.png" class="gallery-img">
-        <div class="view-icon">👁️</div>
-        <div class="card-overlay"></div>
-    </div>
-</div>
-
-<div id="galleryModal">
-    <span id="galleryClose" class="close-modal">&times;</span>
-    <span id="arrowLeft" class="arrow">&#10094;</span>
-    <img id="galleryModalImg">
-    <span id="arrowRight" class="arrow">&#10095;</span>
-    <div class="image-counter">
-        <span id="currentImage">1</span> / <span id="totalImages">24</span>
-    </div>
-    <button class="download-btn" id="downloadBtn">Download Image</button>
-</div>
-
-<script>
-    const modal = document.getElementById("galleryModal");
-    const modalImg = document.getElementById("galleryModalImg");
-    const closeModal = document.getElementById("galleryClose");
-    const arrowLeft = document.getElementById("arrowLeft");
-    const arrowRight = document.getElementById("arrowRight");
-    const currentImage = document.getElementById("currentImage");
-    const totalImages = document.getElementById("totalImages");
-    const downloadBtn = document.getElementById("downloadBtn");
-    const layoutButtons = document.querySelectorAll(".layout-btn");
-    const galleryGrid = document.querySelector(".gallery-grid");
-
-    const cards = Array.from(document.querySelectorAll(".gallery-card"));
-    let currentIndex = 0;
-
-    // Set total images count
-    totalImages.textContent = cards.length;
-
-    function openModal(index) {
-        currentIndex = index;
-        modal.classList.add('active');
-        modal.style.display = "block";
-        modalImg.src = cards[index].querySelector('img').src;
-        currentImage.textContent = index + 1;
-        
-        // Add loading animation
-        modalImg.style.display = 'none';
-        setTimeout(() => {
-            modalImg.style.display = 'block';
-        }, 300);
-    }
-
-    cards.forEach((card, i) => {
-        card.addEventListener("click", () => {
-            openModal(i);
-        });
-    });
-
-    closeModal.onclick = () => {
-        modal.classList.remove('active');
-        setTimeout(() => {
-            modal.style.display = "none";
-        }, 300);
-    };
-    
-    modal.onclick = e => { 
-        if (e.target === modal) {
-            modal.classList.remove('active');
-            setTimeout(() => {
-                modal.style.display = "none";
-            }, 300);
-        }
-    };
-
-    arrowRight.onclick = () => {
-        currentIndex = (currentIndex + 1) % cards.length;
-        modalImg.src = cards[currentIndex].querySelector('img').src;
-        currentImage.textContent = currentIndex + 1;
-    };
-
-    arrowLeft.onclick = () => {
-        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-        modalImg.src = cards[currentIndex].querySelector('img').src;
-        currentImage.textContent = currentIndex + 1;
-    };
-
-    // Keyboard navigation
-    document.addEventListener('keydown', (e) => {
-        if (modal.style.display === 'block') {
-            if (e.key === 'ArrowRight') {
-                arrowRight.onclick();
-            } else if (e.key === 'ArrowLeft') {
-                arrowLeft.onclick();
-            } else if (e.key === 'Escape') {
-                closeModal.onclick();
-            }
-        }
-    });
-
-    // Download functionality
-    downloadBtn.addEventListener('click', () => {
-        const imageUrl = cards[currentIndex].querySelector('img').src;
-        const link = document.createElement('a');
-        link.href = imageUrl;
-        link.download = `sales-proof-${currentIndex + 1}.jpg`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    });
-
-    // Layout toggle functionality
-    layoutButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const layout = button.getAttribute('data-layout');
-            
-            // Update active button
-            layoutButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            
-            // Apply layout
-            galleryGrid.className = 'gallery-grid';
-            if (layout !== 'standard') {
-                galleryGrid.classList.add(layout);
-            }
-        });
-    });
-
-    // Lazy loading for images
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-
-    // Uncomment to enable lazy loading
-    // document.querySelectorAll('.gallery-img').forEach(img => {
-    //     img.dataset.src = img.src;
-    //     img.src = '';
-    //     img.classList.add('lazy');
-    //     imageObserver.observe(img);
-    // });
-</script>
-
-</section>
+  <!-- sales-proof removed (moved earlier) -->
 
   
+
+  <!-- sales-proof: inserted banner + image gallery (separated from Case Studies) -->
+  <section id="sales-proof" class="gallery-section banner-section">
+
+  <style>
+    .banner-section{ position:relative; padding:0; min-height:360px; display:block }
+    .banner-clip{ position:relative; width:100%; }
+    /* show full video width without cropping */
+    .banner-video{ position:relative; display:block; width:100%; height:auto; object-fit:contain; z-index:0; background:#000 }
+    .banner-overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(11,17,32,0.32) 0%, rgba(11,17,32,0.48) 60%, rgba(11,17,32,0.6) 100%); z-index:1; pointer-events:none }
+    .banner-content{ position:relative; z-index:2; max-width:1180px; margin:0 auto; padding:24px 5%; color: #fff; text-align:center; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:10px }
+    .banner-title{ font-size:36px; line-height:1.05; font-weight:700; color:var(--card-ink,#fff); text-shadow:0 6px 20px rgba(11,17,32,0.5) }
+    .banner-sub{ color:rgba(255,255,255,0.9); max-width:900px; margin:0 auto; font-size:16px }
+    .banner-play{ display:none; position:absolute; left:50%; transform:translateX(-50%); bottom:28px; z-index:3; width:56px; height:56px; border-radius:999px; background:rgba(255,255,255,0.12); border:1px solid var(--border); color:#fff; font-size:20px; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(2,6,23,0.4); backdrop-filter: blur(4px); }
+    @media(max-width:768px){ .banner-title{ font-size:22px } .banner-sub{ font-size:14px } .banner-content{ padding:20px 5% } }
+  </style>
+
+    <div class="banner-clip">
+      <video id="bannerVideo" class="banner-video" autoplay muted loop playsinline preload="auto">
+        <source src="/timaro-main/salesproof1.webm" type="video/webm">
+        <!-- fallback image/text -->
+      </video>
+      <div class="banner-overlay" aria-hidden="true"></div>
+      <div class="banner-content">
+        <h2 class="banner-title"><span>Sales</span> Proof</h2>
+        <p class="banner-sub">Visual evidence of successful campaigns and client results — watch this short clip to see the impact.</p>
+        <button id="bannerToggle" class="banner-play" aria-label="Play/Pause video">▸</button>
+      </div>
+    </div>
+
+  <script>
+    (function(){
+      const vid = document.getElementById('bannerVideo');
+      if(!vid) return;
+      const tryPlay = () => vid.play().catch(()=>{});
+      tryPlay();
+      setTimeout(tryPlay, 300);
+
+      // mobile play/pause overlay
+      const toggle = document.getElementById('bannerToggle');
+      if(toggle){
+        const update = ()=> toggle.textContent = vid.paused ? '▸' : '❚❚';
+        toggle.addEventListener('click', ()=>{ if(vid.paused) vid.play().catch(()=>{}); else vid.pause(); update(); });
+        vid.addEventListener('play', update); vid.addEventListener('pause', update);
+        update();
+      }
+    })();
+  </script>
+
+  </section>
+
+  <!-- Image Sales Proof (separate gallery) -->
+  <section id="sales-gallery" class="gallery-section">
+    <div class="container">
+      <h2 class="gallery-title"><span>Image</span> Proof</h2>
+      <p class="gallery-subtitle">Screenshots and campaign images that support the video case study.</p>
+      <style>
+        .gallery-section{ padding:48px 5%; background:var(--surface); }
+        .gallery-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; align-items:start }
+        .gallery-card{ background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:hidden; box-shadow:var(--shadow); cursor:pointer }
+        .gallery-img{ width:100%; height:180px; object-fit:cover; display:block }
+        .card-overlay{ padding:12px; color:var(--primary-ink) }
+
+        /* Modal */
+        #galleryModal{ display:none; position:fixed; inset:0; background:rgba(2,6,23,0.6); z-index:99999; align-items:center; justify-content:center }
+        #galleryModal.open{ display:flex }
+        #galleryModalImg{ max-width:92%; max-height:80%; border-radius:8px; box-shadow:0 10px 30px rgba(2,6,23,0.6) }
+        .close-modal{ position:absolute; top:18px; right:22px; color:#fff; font-size:32px; cursor:pointer }
+        .arrow{ position:absolute; top:50%; transform:translateY(-50%); color:#fff; font-size:38px; cursor:pointer; user-select:none }
+        #arrowLeft{ left:22px }
+        #arrowRight{ right:22px }
+        .image-counter{ position:absolute; bottom:22px; left:50%; transform:translateX(-50%); color:#fff; background:rgba(0,0,0,0.28); padding:6px 10px; border-radius:8px }
+        .download-btn{ position:absolute; bottom:22px; right:22px; background:var(--card); color:var(--primary-ink); padding:8px 10px; border-radius:8px; border:1px solid var(--border) }
+
+        @media(max-width:640px){ .gallery-img{ height:140px } .banner-play{ display:block } }
+      </style>
+
+      <div class="gallery-grid" id="salesGallery">
+        <div class="gallery-card"><img class="gallery-img" src="https://i.pinimg.com/736x/6b/c3/a6/6bc3a619ebc867ea05b6f1dd3ebe2abe.jpg" data-index="0"><div class="card-overlay"></div></div>
+        <div class="gallery-card"><img class="gallery-img" src="https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto/v1/attachments/delivery/asset/1e034bbbc63e8fcdee5d91181f4e8b7c-1744805081/Screenshot%202025-04-16%20120406.png" data-index="1"><div class="card-overlay"></div></div>
+        <div class="gallery-card"><img class="gallery-img" src="https://i.pinimg.com/736x/26/34/72/26347291e9242b96e8ca1d798d586a7f.jpg" data-index="2"><div class="card-overlay"></div></div>
+      </div>
+
+      <div id="galleryModal" aria-hidden="true">
+        <span id="galleryClose" class="close-modal">&times;</span>
+        <span id="arrowLeft" class="arrow">&#10094;</span>
+        <img id="galleryModalImg" src="" alt="" />
+        <span id="arrowRight" class="arrow">&#10095;</span>
+        <div class="image-counter"><span id="currentImage">1</span> / <span id="totalImages">3</span></div>
+        <a id="downloadBtn" class="download-btn" href="#" download>Download</a>
+      </div>
+
+      <script>
+        (function(){
+          const imgs = Array.from(document.querySelectorAll('#salesGallery .gallery-img'));
+          const modal = document.getElementById('galleryModal');
+          const modalImg = document.getElementById('galleryModalImg');
+          const current = document.getElementById('currentImage');
+          const total = document.getElementById('totalImages');
+          const dl = document.getElementById('downloadBtn');
+          let idx = 0;
+          total.textContent = imgs.length;
+
+          function openAt(i){ idx = (i+imgs.length)%imgs.length; modal.classList.add('open'); modalImg.src = imgs[idx].src; current.textContent = idx+1; dl.href = imgs[idx].src; modal.setAttribute('aria-hidden','false'); }
+          function close(){ modal.classList.remove('open'); modalImg.src=''; modal.setAttribute('aria-hidden','true'); }
+
+          imgs.forEach((el,i)=> el.addEventListener('click', ()=> openAt(i)));
+          document.getElementById('galleryClose').addEventListener('click', close);
+          document.getElementById('arrowLeft').addEventListener('click', ()=> openAt(idx-1));
+          document.getElementById('arrowRight').addEventListener('click', ()=> openAt(idx+1));
+          modal.addEventListener('click', e=>{ if(e.target===modal) close(); });
+          document.addEventListener('keydown', e=>{ if(!modal.classList.contains('open')) return; if(e.key==='Escape') close(); if(e.key==='ArrowRight') openAt(idx+1); if(e.key==='ArrowLeft') openAt(idx-1); });
+        })();
+      </script>
+    </div>
+  </section>
 
   <!-- Process -->
   <section id="process" class="section">
@@ -1492,12 +1009,12 @@ document.addEventListener("click", function(e) {
 
 <style>
   :root {
-    --accent: #10b981;
-    --bg-dark: #020617;
-    --icon-bg: #020617;
-    --icon-border: #1f2937;
-    --icon-color: #e5e7eb;
-    --tooltip-bg: #020617;
+    --accent: #7c3aed;
+    --bg-dark: #ffffff;
+    --icon-bg: #ffffff;
+    --icon-border: rgba(11,17,32,.06);
+    --icon-color: var(--primary-ink);
+    --tooltip-bg: rgba(255,255,255,.96);
   }
 
   /* Wrapper: fixed right side */
@@ -1620,8 +1137,8 @@ document.addEventListener("click", function(e) {
   .facebook i { color: #3b82f6; }
   .instagram i { color: #f97316; }
   .tiktok i { color: #22d3ee; }
-  .github i { color: #e5e7eb; }
-  .whatsapp i { color: #22c55e; }
+  .github i { color: var(--primary-ink); }
+  .whatsapp i { color: var(--accent); }
   .email i { color: #facc15; }
 
   .social-link:hover i { color: var(--accent); }
@@ -1708,7 +1225,7 @@ document.addEventListener("click", function(e) {
     <div class="badge">NEWEST STRATEGY FOR ECOMMERCE</div>
     
     <div class="section-header">
-        <h1>FlowSync AI: The Ultimate Optimization Framework for Your Website</h1>
+        <h1><span class="flowsync-title">FlowSync AI: The Ultimate Optimization Framework for Your Website</span></h1>
         <p>Welcome to FlowSync AI, an innovative framework crafted to supercharge your website's performance and boost sales through ongoing, data-driven tweaks. This strategy harmonizes user behavior, store layout, and conversion signals into a seamless system that minimizes friction and maximizes revenue efficiency.</p>
     </div>
     
@@ -1765,185 +1282,119 @@ document.addEventListener("click", function(e) {
 
 <style>
 .flow-sync-section {
-    background-color: #0a0a0a;
-    color: #ffffff;
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffdf8;
+  color: var(--primary-ink);
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .flow-sync-section .badge {
-    display: inline-block;
-    background-color: #23C78E;
-    color: #000;
-    font-weight: 700;
-    font-size: 0.85rem;
-    padding: 6px 16px;
-    border-radius: 30px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+  display: inline-block;
+  background-color: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .flow-sync-section .section-header {
-    margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .flow-sync-section .section-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    font-weight: 800;
-    line-height: 1.2;
-    background: linear-gradient(to right, #ffffff, #23C78E);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+  background: linear-gradient(to right, var(--surface), var(--primary-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+.flowsync-title{color:var(--primary) !important; background:none !important; -webkit-background-clip:initial; -webkit-text-fill-color:initial}
+
 .flow-sync-section .section-header p {
-    font-size: 1.2rem;
-    color: #cccccc;
-    max-width: 800px;
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 800px;
 }
 
 .flow-sync-section .content-wrapper {
-    display: flex;
-    gap: 60px;
-    align-items: flex-start;
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
 }
 
 .flow-sync-section .image-container {
-    flex: 1;
-    position: relative;
+  flex: 1;
+  position: relative;
 }
 
 .flow-sync-section .ai-visualization {
-    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-    border-radius: 16px;
-    padding: 30px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #333;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    position: relative;
-    overflow: hidden;
+  background: linear-gradient(145deg, var(--surface), var(--bg));
+  border-radius: 12px;
+  padding: 18px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
 }
 
 .flow-sync-section .ai-visualization::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(35, 199, 142, 0.1) 0%, rgba(35, 199, 142, 0) 70%);
-    z-index: 0;
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(124,58,237,0.06) 0%, rgba(124,58,237,0) 70%);
+  z-index: 0;
 }
 
 /* Image Placeholder Styles */
-.flow-sync-section .image-placeholder {
-    color: #23C78E;
-    font-size: 1.1rem;
-    text-align: center;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
-
-.flow-sync-section .image-placeholder i {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    color: #23C78E;
-    opacity: 0.7;
-}
-
-.flow-sync-section .image-placeholder small {
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 10px;
-}
+.flow-sync-section .image-placeholder { color: var(--primary); font-size:1.05rem }
+.flow-sync-section .image-placeholder i { font-size:3rem; color:var(--primary); opacity:.85 }
 
 /* Actual Image Styles - Use when you add your image */
-.flow-sync-section .ai-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-    z-index: 1;
-    position: relative;
-}
+.flow-sync-section .ai-image { width:100%; height:100%; object-fit:cover; border-radius:8px }
 
-.flow-sync-section .pillars-container {
-    flex: 1;
-}
+.flow-sync-section .pillars-container { flex:1 }
 
 .flow-sync-section .pillar {
-    margin-bottom: 40px;
-    padding: 25px;
-    background: rgba(30, 30, 30, 0.7);
-    border-radius: 12px;
-    border-left: 4px solid #23C78E;
-    transition: transform 0.3s ease, background 0.3s ease;
+  margin-bottom: 24px;
+  padding: 18px;
+  background: var(--surface);
+  border-radius: 10px;
+  border-left: 4px solid var(--primary);
+  transition: transform .2s ease, background .2s ease;
 }
 
-.flow-sync-section .pillar:hover {
-    transform: translateY(-5px);
-    background: rgba(40, 40, 40, 0.7);
-}
+.flow-sync-section .pillar:hover { transform:translateY(-4px) }
 
-.flow-sync-section .pillar-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
+.flow-sync-section .pillar-header { display:flex; align-items:center; margin-bottom:12px }
 
-.flow-sync-section .pillar-number {
-    background-color: #23C78E;
-    color: #000;
-    font-weight: 800;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    flex-shrink: 0;
-}
+.flow-sync-section .pillar-number { background-color: var(--primary); color:#fff; font-weight:700; width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-right:12px }
 
-.flow-sync-section .pillar-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-}
+.flow-sync-section .pillar-title { font-size:1.1rem; font-weight:700 }
 
-.flow-sync-section .pillar-content {
-    color: #cccccc;
-    padding-left: 51px;
-}
+.flow-sync-section .pillar-content { color:var(--muted); padding-left:46px }
 
-.flow-sync-section .pillar-content strong {
-    color: #23C78E;
-}
+.flow-sync-section .pillar-content strong { color:var(--primary) }
 
-.flow-sync-section .conclusion {
-    margin-top: 40px;
-    padding: 30px;
-    background: rgba(35, 199, 142, 0.1);
-    border-radius: 12px;
-    border: 1px solid rgba(35, 199, 142, 0.3);
-}
+.flow-sync-section .conclusion { margin-top:20px; padding:18px; background:linear-gradient(90deg, rgba(124,58,237,0.06), rgba(6,182,212,0.04)); border-radius:10px; border:1px solid rgba(124,58,237,0.06) }
 
-.flow-sync-section .conclusion p {
-    font-size: 1.1rem;
-    font-style: italic;
-}
+.flow-sync-section .conclusion p { font-size:1rem; font-style:italic }
 
 @media (max-width: 968px) {
     .flow-sync-section .content-wrapper {
@@ -1994,11 +1445,48 @@ document.addEventListener("click", function(e) {
       <div id="ecomelites-portfolio" style="background:transparent; padding:0">
         <div class="categories" id="ec-categories"></div>
         <div class="projects">
-          <div class="grid" id="ec-projectGrid"></div>
+          <div class="grid" id="ec-projectGrid">
+            <!-- Placeholder project cards (replaced by live feed when available) -->
+            <article class="card project-card">
+              <img class="project-figure" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1200&auto=format&fit=crop" alt="Growth Shopify Store" style="height:160px; width:100%; object-fit:cover; display:block; border-bottom:1px solid var(--border)" />
+              <div class="card-body">
+                <h3 style="margin:0 0 6px">Growth Shopify Store</h3>
+                <p class="muted" style="margin:0">Design + CRO — 42% lift in conversion rate for a 30-day test.</p>
+                <div style="margin-top:12px; display:flex; gap:8px; align-items:center; justify-content:space-between">
+                  <div class="chip">Shopify</div>
+                  <a class="btn btn-primary" href="#">View</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <img class="project-figure" src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1200&auto=format&fit=crop" alt="Funnel Revamp" style="height:160px; width:100%; object-fit:cover; display:block; border-bottom:1px solid var(--border)" />
+              <div class="card-body">
+                <h3 style="margin:0 0 6px">Funnel Revamp</h3>
+                <p class="muted" style="margin:0">Checkout UX + speed optimization — 28% AOV increase.</p>
+                <div style="margin-top:12px; display:flex; gap:8px; align-items:center; justify-content:space-between">
+                  <div class="chip">Funnel</div>
+                  <a class="btn btn-primary" href="#">View</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <img class="project-figure" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop" alt="Store Migration" style="height:160px; width:100%; object-fit:cover; display:block; border-bottom:1px solid var(--border)" />
+              <div class="card-body">
+                <h3 style="margin:0 0 6px">Store Migration</h3>
+                <p class="muted" style="margin:0">Fast migration with retention-first setup and analytics.</p>
+                <div style="margin-top:12px; display:flex; gap:8px; align-items:center; justify-content:space-between">
+                  <div class="chip">Migration</div>
+                  <a class="btn btn-primary" href="#">View</a>
+                </div>
+              </div>
+            </article>
+          </div>
           <a id="ec-loadMoreBtn" class="btn" href="#portfolio">Load More</a>
         </div>
-        <div class="team mt-4" style="background:#0f131a">
-          <h2>Small team. Senior output.</h2>
+        <div class="team mt-4" style="background:var(--surface); padding:18px; border-radius:12px">
+          <h2 style="color:var(--primary-dark)">Small team. Senior output.</h2>
           <div class="team-grid" id="ec-teamGrid"></div>
         </div>
       </div>
@@ -2167,13 +1655,13 @@ document.addEventListener("click", function(e) {
   <!-- ========== STYLES (IN-SECTION) ========== -->
   <style>
     :root {
-      --bbg-bg: #000000;
-      --bbg-card: #020617;
-      --bbg-border: rgba(148, 163, 184, 0.45);
-      --bbg-border-strong: #10b981;
-      --bbg-accent: #10b981;
-      --bbg-text-main: #e5e7eb;
-      --bbg-text-muted: #9ca3af;
+      --bbg-bg: #fffdf8;
+      --bbg-card: #ffffff;
+      --bbg-border: rgba(11,17,32,0.06);
+      --bbg-border-strong: var(--primary);
+      --bbg-accent: var(--primary);
+      --bbg-text-main: var(--primary-ink);
+      --bbg-text-muted: var(--muted);
     }
 
     #bbg-stack {
@@ -2210,8 +1698,8 @@ document.addEventListener("click", function(e) {
       width: 7px;
       height: 7px;
       border-radius: 999px;
-      background: radial-gradient(circle at 30% 30%, #ffffff, var(--bbg-accent));
-      box-shadow: 0 0 14px rgba(16, 185, 129, 0.9);
+      background: radial-gradient(circle at 30% 30%, var(--bbg-card), var(--bbg-accent));
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.09);
     }
 
     .bbg-title-row {
@@ -2226,11 +1714,11 @@ document.addEventListener("click", function(e) {
       font-size: clamp(26px, 3vw, 32px);
       font-weight: 700;
       letter-spacing: -0.04em;
-      color: #f9fafb;
+      color: var(--primary-ink);
     }
 
     .bbg-title span {
-      background: linear-gradient(to right, #22c55e, #06b6d4);
+      background: linear-gradient(to right, var(--primary), var(--primary-2));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -2251,7 +1739,7 @@ document.addEventListener("click", function(e) {
     .bbg-meta {
       margin-top: 4px;
       font-size: 11px;
-      color: var(--bbg-text-muted);
+      color: var(--bbg-text);
     }
 
     .bbg-meta-pill {
@@ -2260,8 +1748,9 @@ document.addEventListener("click", function(e) {
       gap: 6px;
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(75, 85, 99, 0.8);
-      background: #020617;
+      border: 1px solid rgba(75, 85, 99, 0.08);
+      background: var(--bbg-card);
+      color: var(--bbg-text-main);
     }
 
     .bbg-meta-pill-dot {
@@ -2284,8 +1773,8 @@ document.addEventListener("click", function(e) {
     .bbg-filter {
       padding: 6px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      background: #020617;
+      border: 1px solid var(--bbg-border);
+      background: var(--bbg-card);
       color: var(--bbg-text-muted);
       font-size: 11px;
       text-transform: uppercase;
@@ -2307,10 +1796,9 @@ document.addEventListener("click", function(e) {
 
     .bbg-filter[data-active="true"] {
       border-color: var(--bbg-border-strong);
-      color: #ecfdf5;
-      box-shadow: 0 0 0 1px rgba(15, 23, 42, 1),
-        0 0 18px rgba(16, 185, 129, 0.5);
-      background: radial-gradient(circle at 0 0, rgba(16, 185, 129, 0.25), #020617);
+      color: #ffffff;
+      box-shadow: 0 6px 20px rgba(124,58,237,0.08);
+      background: radial-gradient(circle at 0 0, rgba(124,58,237,0.08), var(--bbg-card));
     }
 
     .bbg-filter[data-active="true"] .bbg-filter-dot {
@@ -2325,9 +1813,9 @@ document.addEventListener("click", function(e) {
     /* GRID WRAPPER */
     .bbg-grid-wrap {
       border-radius: 20px;
-      border: 1px solid rgba(148, 163, 184, 0.35);
-      background: #020617;
-      box-shadow: 0 26px 60px rgba(15, 23, 42, 0.95);
+      border: 1px solid var(--bbg-border);
+      background: var(--bbg-card);
+      box-shadow: 0 12px 30px rgba(16,24,40,0.06);
       padding: 16px;
       overflow: hidden;
     }
@@ -2344,10 +1832,10 @@ document.addEventListener("click", function(e) {
       position: relative;
       border-radius: 16px;
       padding: 10px 11px 9px;
-      background: radial-gradient(circle at 0 0, rgba(148, 163, 184, 0.18), transparent 60%),
-        #020617;
-      border: 1px solid rgba(51, 65, 85, 0.9);
-      box-shadow: 0 16px 30px rgba(15, 23, 42, 0.9);
+      background: radial-gradient(circle at 0 0, rgba(124,58,237,0.06), transparent 60%),
+        var(--bbg-card);
+      border: 1px solid rgba(51, 65, 85, 0.06);
+      box-shadow: 0 8px 20px rgba(16,24,40,0.04);
       display: flex;
       flex-direction: column;
       gap: 6px;
@@ -2360,9 +1848,9 @@ document.addEventListener("click", function(e) {
     .bbg-card:hover {
       transform: translateY(-2px);
       border-color: var(--bbg-border-strong);
-      box-shadow: 0 22px 40px rgba(15, 23, 42, 1);
-      background: radial-gradient(circle at 0 0, rgba(16, 185, 129, 0.18), transparent 60%),
-        #020617;
+      box-shadow: 0 16px 28px rgba(16,24,40,0.06);
+      background: radial-gradient(circle at 0 0, rgba(124,58,237,0.08), transparent 60%),
+        var(--bbg-card);
     }
 
     .bbg-card-header {
@@ -2402,7 +1890,7 @@ document.addEventListener("click", function(e) {
     .bbg-name {
       font-size: 13px;
       font-weight: 600;
-      color: #f9fafb;
+      color: var(--bbg-text-main);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -3481,7 +2969,7 @@ document.addEventListener("click", function(e) {
         <h2>Client Reviews</h2>
         <div class="review-wrapper">
           <div class="card">
-            <h3 style="color:#10b981">Leave a Review</h3>
+            <h3 style="color:var(--primary)">Leave a Review</h3>
             <form id="ec-reviewForm">
               <label>Name</label>
               <input type="text" name="name" required>
@@ -3687,8 +3175,11 @@ document.addEventListener("click", function(e) {
     const counts = {1:$("#ec-c1")||$("#c1"),2:$("#ec-c2")||$("#c2"),3:$("#ec-c3")||$("#c3"),4:$("#ec-c4")||$("#c4"),5:$("#ec-c5")||$("#c5")};
 
     function renderStars(n){
-      const full = Math.round(n);
-      return Array.from({length:5}).map((_,i)=>`<span style="opacity:${i<full?1:.25}">★</span>`).join("");
+      const full = Math.round(n) || 0;
+      return Array.from({length:5}).map((_,i)=>{
+        const filled = i < full ? 'filled' : '';
+        return `<span class="star ${filled}" data-value="${i+1}">★</span>`;
+      }).join("");
     }
     function computeStats(list){
       const dist={1:0,2:0,3:0,4:0,5:0};
@@ -3699,9 +3190,12 @@ document.addEventListener("click", function(e) {
     }
     function feedItem(r){
       return `<div class="review">
-        <div class="author">${r.name||"Client"} · <span class="muted">${r.company||r.type||""}</span></div>
-        <div class="meta">${renderStars(r.rating)} <span class="muted"> · ${r.date||""}</span></div>
-        <p class="mt-2">${r.review||r.comment||""}</p>
+        <div class="review-avatar">${(r.name||"C").charAt(0)}</div>
+        <div class="review-body">
+          <div class="rating">${renderStars(r.rating)} <span class="muted">· ${r.date||""}</span></div>
+          <div class="author">${r.name||"Client"} <small class="muted">· ${r.company||r.type||""}</small></div>
+          <p class="mt-2">${r.review||r.comment||""}</p>
+        </div>
       </div>`;
     }
 
@@ -3722,6 +3216,26 @@ document.addEventListener("click", function(e) {
       feed.insertAdjacentHTML('beforeend', next);
       shown += Math.min(step, all.length - shown);
       loadMoreBtn.style.display = shown < all.length ? "inline-flex" : "none";
+    }
+
+    // Normalize any existing static stars in the DOM so they use `.star` and `.filled`
+    normalizeExistingStars();
+
+    function normalizeExistingStars(){
+      // Find any nodes under feed that include star characters and normalize them to .star spans
+      const nodes = feed.querySelectorAll('*');
+      nodes.forEach(n=>{
+        if(!n.children.length && typeof n.textContent === 'string' && n.textContent.includes('★')){
+          const txt = n.textContent.trim();
+          // count stars
+          const starCount = (txt.match(/★/g)||[]).length;
+          if(starCount>0){
+            // preserve any trailing text (like date)
+            const rest = txt.replace(/★+/,'').trim();
+            n.innerHTML = renderStars(starCount) + (rest?(' <span class="muted">'+rest+'</span>'):'');
+          }
+        }
+      });
     }
     async function loadReviews(){
       try{
